@@ -1,10 +1,142 @@
-/* ----- TO DO: ADD CSS RESET CODE HERE ----- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 /* ----- GLOBAL/MOBILE CUSTOM STYLES START HERE ----- */
 /* ----- ROOT ELEMENT FOR CSS VARIABLES ----- */
-:root{
+:root {
     --wht: #f2f2f2;
     --lt-gray: #eaeaea;
     --med-gray: #555;
@@ -20,7 +152,7 @@
 }
 
 /* ----- BODY STYLES ----- */
-body{
+body {
     font-family: var(--fonts);
     background-color: var(--hue-dk);
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='64' height='64' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%2315242f'/><path d='M32 64c0 17.674-14.326 32-32 32s-32-14.326-32-32 14.326-32 32-32 32 14.326 32 32zm64 0c0 17.674-14.326 32-32 32S32 81.674 32 64s14.326-32 32-32 32 14.326 32 32zm-32 0c0 17.674-14.326 32-32 32S0 81.674 0 64s14.326-32 32-32 32 14.326 32 32zM32 0c0 17.674-14.326 32-32 32S-32 17.674-32 0s14.326-32 32-32S32-17.674 32 0zm64 0c0 17.674-14.326 32-32 32S32 17.674 32 0s14.326-32 32-32S96-17.674 96 0zM64 0c0 17.674-14.326 32-32 32S0 17.674 0 0s14.326-32 32-32S64-17.674 64 0zM32 32c0 17.674-14.326 32-32 32s-32-14.326-32-32S-17.674 0 0 0s32 14.326 32 32zm64 0c0 17.674-14.326 32-32 32S32 49.674 32 32 46.326 0 64 0s32 14.326 32 32zm-32 0c0 17.674-14.326 32-32 32S0 49.674 0 32 14.326 0 32 0s32 14.326 32 32z'  stroke-width='0.5' stroke='%231c384e' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-84,-8)' fill='url(%23a)'/></svg>");
@@ -31,7 +163,7 @@ body{
 
 /* ----- SKIP LINK STYLES ----- */
 /* FROM WEB-AIM:  */
-#skip{
+#skip {
     position: absolute;
     left: -10000px;
     top: auto;
@@ -40,7 +172,7 @@ body{
     overflow: hidden;
 }
 
-#skip:focus{
+#skip:focus {
     position: static;
     width: auto;
     height: auto;
@@ -49,7 +181,9 @@ body{
 }
 
 /* ----- HEADER/MAIN/FOOTER STYLES ----- */
-header, main, footer{
+header,
+main,
+footer {
     padding: 2rem 1rem;
     width: calc(100% - 2rem);
     max-width: calc(1100px - 2rem);
@@ -59,7 +193,8 @@ header, main, footer{
 }
 
 /* ----- HEADER/FOOTER STYLES ----- */
-header, footer{
+header,
+footer {
     text-align: center;
     background-color: var(--hue-dk);
     color: var(--hue-lt);
@@ -67,17 +202,18 @@ header, footer{
 
 
 /* ----- HEADING STYLES ----- */
-h1, h2{
+h1,
+h2 {
     font-weight: bold;
     max-width: 45ch;
 }
 
-h1{
+h1 {
     font-size: 3rem;
     margin: 12px auto 32px;
 }
 
-h2{
+h2 {
     font-size: 1.75rem;
     margin: 0 auto;
     display: flex;
@@ -86,12 +222,12 @@ h2{
 }
 
 /* ----- DECORATIVE SVG IN H2 STYLES ----- */
-h2 svg{
+h2 svg {
     stroke: var(--hue-red);
 }
 
 /* ----- LINK STYLES ----- */
-a{
+a {
     /* color: var(--wht); */
     color: var(--hue-lt);
     display: block;
@@ -100,25 +236,25 @@ a{
     transition: all 500ms;
 }
 
-p > a{
+p>a {
     display: inline;
     padding: 0;
     text-decoration-thickness: 3px;
     color: var(--hue-dk);
 }
 
-a:hover{
+a:hover {
     text-decoration-color: var(--hue-red);
 }
 
-a:focus{
+a:focus {
     outline: 4px solid var(--hue-blue);
     outline-offset: 2px;
     text-decoration-color: var(--hue-red);
 }
 
 /* ----- NAV STYLES ----- */
-nav a{
+nav a {
     font-size: 1.2rem;
     font-weight: bold;
     background-color: var(--hue-lt);
@@ -131,22 +267,22 @@ nav a{
     transition: all 500ms;
 }
 
-nav a:hover{
+nav a:hover {
     border-color: var(--hue-red);
 }
 
-nav a:focus{
+nav a:focus {
     box-shadow: 0 0 0 10px var(--hue-red);
     outline-offset: 0;
 }
 
 /* ----- SECTION STYLES ----- */
-section{
+section {
     margin: 32px 0;
 }
 
 /* ----- DECORATIVE DIV STYLES ----- */
-.divider{
+.divider {
     height: 12px;
     width: 100%;
     background-image: url("images/sparkle.svg");
@@ -155,7 +291,7 @@ section{
 }
 
 /* ----- CODE STYLES ----- */
-pre{
+pre {
     padding: 0 16px;
     width: calc(100% - 32px);
     max-width: calc(550px - 32px);
@@ -165,30 +301,30 @@ pre{
     color: var(--hue-lt);
 }
 
-pre code{
+pre code {
     padding: 0 12px;
 }
 
-code{
+code {
     font-family: monospace;
 }
 
 /* ----- TEXT STYLES ----- */
-p{
+p {
     padding: 16px 0;
     width: 100%;
     max-width: 65ch;
     margin: 0 auto;
 }
 
-strong{
+strong {
     font-weight: bold;
     text-decoration: 4px solid underline var(--hue-red);
 }
 
 /* ----- MEDIA QUERY - SMALL/MEDIUM SCREENS ----- */
-@media screen and (min-width: 550px){
-    nav ul{
+@media screen and (min-width: 550px) {
+    nav ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
@@ -196,8 +332,8 @@ strong{
 }
 
 /* ----- MEDIA QUERY - LARGE SCREENS ----- */
-@media screen and (min-width: 900px){
-    nav ul{
+@media screen and (min-width: 900px) {
+    nav ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
